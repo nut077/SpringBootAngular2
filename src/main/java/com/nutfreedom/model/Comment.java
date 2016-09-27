@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -12,6 +13,7 @@ import javax.persistence.ManyToOne;
 public class Comment {
 
     @Id
+    @GeneratedValue
     private Long commentId;
     private String content;
 

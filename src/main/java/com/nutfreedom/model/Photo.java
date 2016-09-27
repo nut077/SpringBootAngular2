@@ -13,6 +13,7 @@ import java.util.List;
 public class Photo {
 
     @Id
+    @GeneratedValue
     private Long photoId;
 
     private String photoName;

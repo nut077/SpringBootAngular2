@@ -12,6 +12,7 @@ import java.util.List;
 public class User {
 
     @Id
+    @GeneratedValue
     private Long userId;
 
     private String firstName;
