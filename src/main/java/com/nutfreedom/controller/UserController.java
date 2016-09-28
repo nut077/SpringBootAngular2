@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.Map;
 
@@ -27,7 +28,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String login(@RequestBody Map<String, String> json) throws ServletException {
+    public String login(@RequestBody Map<String, String> json) throws ServletException, UnsupportedEncodingException {
         if (json.get("username") == null || json.get("password") == null) {
             throw new ServletException("Please fill in username and password");
         }
