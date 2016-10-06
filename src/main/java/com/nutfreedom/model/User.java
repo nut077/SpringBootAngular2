@@ -2,6 +2,7 @@ package com.nutfreedom.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@ToString
 @Entity
 public class User {
 
@@ -29,5 +31,6 @@ public class User {
     private List<Photo> photoList;
 
     @ManyToMany
-    private List<Photo> likePhotoList;
+    private List<Photo> likedPhotoList;
+
 }

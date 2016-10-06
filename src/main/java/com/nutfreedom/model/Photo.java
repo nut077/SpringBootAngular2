@@ -1,7 +1,6 @@
 package com.nutfreedom.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -34,4 +33,8 @@ public class Photo {
     @OneToMany(mappedBy = "photo", fetch = FetchType.EAGER)
     private List<Comment> commentList;
 
+    @Override
+    public String toString() {
+        return "";
+    }
 }

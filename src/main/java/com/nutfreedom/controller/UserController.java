@@ -24,7 +24,7 @@ public class UserController {
 
     @RequestMapping(value = "register", method = RequestMethod.POST)
     public User registerUser(@RequestBody User user) {
-        return userService.saveUser(user);
+        return userService.save(user);
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
