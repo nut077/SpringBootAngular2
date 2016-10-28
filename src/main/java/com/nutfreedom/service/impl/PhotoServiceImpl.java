@@ -30,4 +30,9 @@ public class PhotoServiceImpl implements PhotoService {
         return photoRepository.findByPhotoId(photoId);
     }
 
+    @Override
+    public List<Photo> findAll() {
+        return photoRepository.findAll();
+    }
+
 }
